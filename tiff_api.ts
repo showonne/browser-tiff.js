@@ -164,7 +164,7 @@ declare var module: any;
 declare var define: any;
 declare var self: any;
 
-if (typeof process === 'object' && typeof require === 'function') { // NODE
+if (typeof exports === 'object') { // NODE
   module['exports'] = Tiff;
 } else if (typeof define === "function" && define.amd) { // AMD
   define('tiff', <any>[], () => Tiff);
